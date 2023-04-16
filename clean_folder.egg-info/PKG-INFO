@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: clean-folder
+Version: 0.0.1
+Summary: a simple scripts that helps to organize files in folder
+Home-page: https://github.com/julia-yvtshnk/goit-homework-06.git
+Author: Yuliia Yevtushenko
+Author-email: juliasumgudm51@gmail.com
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: license

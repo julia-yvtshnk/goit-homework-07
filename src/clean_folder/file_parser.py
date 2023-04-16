@@ -76,16 +76,16 @@ def scan(folder: Path):
         # Робота з файлом
         ext = get_extension(item.name)  # беремо розширення файлу
         full_name = folder / item.name  # беремо повний шлях до файлу
-        if not ext:
-            MY_OTHER.append(full_name)
-        else:
-            try:
-                container = REGISTER_EXTENSION[ext]
+        if ext:
+            container = REGISTER_EXTENSION.get(ext)
+            if container is not None:
                 EXTENSIONS.add(ext)
                 container.append(full_name)
-            except KeyError:
+            else:           
                 UNKNOWN.add(ext)
                 MY_OTHER.append(full_name)
+        else:
+            MY_OTHER.append(full_name)
 
 
 if __name__ == '__main__':
@@ -117,8 +117,3 @@ if __name__ == '__main__':
     print('*' * 25)
     print(f'Types of file in folder: {EXTENSIONS}')
     print(f'UNKNOWN: {UNKNOWN}')
-
-
-
-
-

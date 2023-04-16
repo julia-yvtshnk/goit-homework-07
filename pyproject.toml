@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="clean_folder"
+version = "0.0.1"
+authors = []
+description = "a simple scripts that helps to organize files in folder"
+readme = "README.md"
+requires-python = ">=3.9"
